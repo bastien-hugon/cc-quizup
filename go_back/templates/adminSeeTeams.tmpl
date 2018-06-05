@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h2>quiz:</h2>
+	{{ if .}}
+		<table>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Score</th>
+			</tr>
+		{{ range .}}
+			<tr>
+				<td>{{.ID}}</td>
+				<td>{{.Name}}</td>
+				<td>{{.Score}}</td>
+				<td><a href="/admin/delete/team/{{.ID}}"><button>Delete</button></a></td>
+			</tr>
+		{{ end }}
+		</table>
+	{{ else }}
+		<h4>no team yet!</h4>
+	{{ end }}
+	<a href="/admin"><h5>admin main page</h5></a>
+</body>
+</html>

@@ -6,8 +6,8 @@ var fs = require('fs');
 var util = require('util');
 
 // Launch Express Servee
-server.listen(80, function () {
-	console.log('Server running on port 80');
+server.listen(8080, function () {
+	console.log('Server running on port 8080');
 });
 
 app.use('/', express.static(__dirname + '/html/'));

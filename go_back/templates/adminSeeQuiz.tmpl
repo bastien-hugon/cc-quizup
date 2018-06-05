@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h2>quiz:</h2>
+	{{ if .}}
+		<table>
+			<tr>
+				<th>#</th>
+				<th>question</th>
+				<th>answer</th>
+				<th>1</th>
+				<th>2</th>
+				<th>3</th>
+				<th>4</th>
+			</tr>
+		{{ range .}}
+			<tr>
+				<td>{{.ID}}</td>
+				<td>{{.Question}}</td>
+				<td>{{.Answer}}</td>
+				<td>{{.Choice1}}</td>
+				<td>{{.Choice2}}</td>
+				<td>{{.Choice3}}</td>
+				<td>{{.Choice4}}</td>
+				<td><a href="/admin/delete/quiz/{{.ID}}"><button>Delete</button></a></td>
+			</tr>
+		{{ end }}
+		</table>
+	{{ else }}
+		<h4>no quiz!</h4>
+	{{ end }}
+	<a href="/admin/create/new/quiz"><h5>Create a quiz</h5></a>
+	<a href="/admin"><h5>admin main page</h5></a>
+</body>
+</html>

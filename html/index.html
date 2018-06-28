@@ -3,21 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <script src="jquery.min.js"></script>
-        <link type="text/html" href="/css/uikit.min.css" />
+        <link rel="stylesheet" type="text/css" href="/css/uikit.css">        
+        <script src="/js/angular.js"></script>
+        <script src="/js/route.js"></script>
         <script src="/js/uikit.min.js"></script>
         <script src="/js/uikit-icons.min.js"></script>
         <script src="/js/socket.io.js"></script>
-        <script src="/js/angular.js"></script>
-        <script src="/js/route.js"></script>
-
         <!-- Controllers -->
         <script src="/controller/app.js"></script>
         <script src="/controller/index.js"></script>
         <script src="/controller/route.js"></script>
         <script src="/controller/ready.js"></script>
         <script src="/controller/login.js"></script>
+
     </head>
     <body>
+        <h1 class="uk-label uk-text-uppercase uk-text-center uk-align-center uk-text-lead uk-label-success" style="color: white">Coding Club Quizz up</h1>
         <div ng-view></div>
     </body>
 </html>
